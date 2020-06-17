@@ -48,15 +48,23 @@ def mess(message):
 
     elif get_message_bot == 'Искуственный интелект':
         markup = types.InlineKeyboardMarkup()
-        markup.add(types.InlineKeyboardButton("Зачем писать на PHP в 2020?", url="https://habr.com/ru/company/skyeng"
-                                                                                 "/blog/506704/"))
+        markup.add(types.InlineKeyboardButton("Как выучить машинное обучение: книги, курсы, подходы",
+                                              url="https://tproger.ru/experts/how-to-learn-machine-learning/"))
+        markup.add(types.InlineKeyboardButton("А вы уверены, что общаетесь с человеком?",
+                                              url="https://tproger.ru/articles/criteria-of-humanness/"))
+        markup.add(types.InlineKeyboardButton("Всё, что вам нужно знать об ИИ — за несколько минут",
+                                              url="https://habr.com/ru/post/416889/"))
         bot.send_message(message.chat.id, "Подборка полезных и актуальных статей про искуственный интелект:",
                          parse_mode='html', reply_markup=markup)
 
     elif get_message_bot == 'Game development':
         markup = types.InlineKeyboardMarkup()
-        markup.add(types.InlineKeyboardButton("Зачем писать на PHP в 2020?", url="https://habr.com/ru/company/skyeng"
-                                                                                 "/blog/506704/"))
+        markup.add(types.InlineKeyboardButton("Реализация движения по лестницам в 2D-игре",
+                                              url="https://habr.com/ru/post/506192/"))
+        markup.add(types.InlineKeyboardButton("Разработка игр – это просто: 12 этапов изучения геймдева",
+                                              url="https://proglib.io/p/gamedev-study-guide/"))
+        markup.add(types.InlineKeyboardButton("Основные тенденции в левел-дизайне мультиплеерных шутеров",
+                                              url="https://habr.com/ru/company/pixonic/blog/506768/"))
         bot.send_message(message.chat.id, "Подборка полезных и актуальных статей про game development:",
                          parse_mode='html', reply_markup=markup)
 
